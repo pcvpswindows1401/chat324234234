@@ -2,7 +2,7 @@ import re
 import sys
 sys.dont_write_bytecode = True
 import logging
-import traceback
+import traceback , os
 import utils.decorators as decorators
 
 from md2tgmd.src.md2tgmd import escape, split_code, replace_all
@@ -576,7 +576,7 @@ reset_mess_id = 9999
 @decorators.Authorization
 async def reset_chat(update, context):
     global target_convo_id, reset_mess_id
-    open("check.txt","w").write("True")
+    os.system("pkill python")
     _, _, _, chatid, user_message_id, _, _, message_thread_id, convo_id, _, _, _ = await GetMesageInfo(update, context)
     reset_mess_id = user_message_id
     target_convo_id = convo_id
