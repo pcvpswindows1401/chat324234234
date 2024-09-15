@@ -662,8 +662,9 @@ async def unknown(update, context): # 当用户输入未知命令时，返回文
 
 async def post_init(application: Application) -> None:
     await application.bot.set_my_commands([
+        BotCommand('reset', 'گفتگو جدید'),
         BotCommand('info', 'Basic information'),
-        BotCommand('reset', 'Reset the bot'),
+        
         BotCommand('start', 'Start the bot'),
         BotCommand('en2zh', 'Translate to Chinese'),
         BotCommand('zh2en', 'Translate to English'),
