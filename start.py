@@ -15,6 +15,6 @@ t.start()
 while True:
   time.sleep(3)
   f = open("check.txt","r").read()
-  if f == "True":break
+  os.system("pkill python")
     
 print("End")
