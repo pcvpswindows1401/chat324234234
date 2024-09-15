@@ -4,7 +4,7 @@
 while true
 do
     # Run the Python script
-    python start.py
+    python bot.py
     # Sleep for a certain amount of time (optional)
     sleep 1
 done
